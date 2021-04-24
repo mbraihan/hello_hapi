@@ -2,10 +2,12 @@
 
 pipeline {
 
-    agent {
-        docker {
-            image 'node'
-            args '-u root'
+    agent{label 'nodejs'}
+    stages{
+        stage('checkout'){
+            steps{
+                checkout scm
+            }
         }
     }
 
