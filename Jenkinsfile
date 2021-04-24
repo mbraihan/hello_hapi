@@ -1,14 +1,7 @@
 pipeline {
 
     agent{label 'nodejs'}
-    stages{
-        stage('checkout'){
-            steps{
-                checkout scm
-            }
-        }
-    }
-
+    
     stages {
         stage('Build') {
             steps {
